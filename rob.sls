@@ -18,8 +18,8 @@ Files for Rob:
   file.managed:
     - name: {{ home }}/.joerc
     - source: salt://files/rob/.joerc
-    - user: {{ name }}
-    - group: {{ user_group }}
+    - user: rob
+    - group: rob
     - mode: 640
     - require:
       - pkg: joe
