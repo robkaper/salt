@@ -22,4 +22,4 @@ Files for Rob:
     - group: rob
     - mode: 640
     - require:
-      - pkg: joe
+      - pkg: 'Packages for Rob'
