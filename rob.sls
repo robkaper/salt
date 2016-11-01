@@ -2,7 +2,7 @@ User acccount for Rob:
   user.present:
     - name: rob
     - shell: /bin/bash
-    - home: /home/{{ name }}
+    - home: /home/rob
     - groups:
       - sudo
   group.present:
