@@ -16,7 +16,7 @@ Packages for Rob:
 
 Files for Rob:
   file.managed:
-    - name: {{ home }}/.joerc
+    - name: /home/rob/.joerc
     - source: salt://files/rob/.joerc
     - user: rob
     - group: rob
