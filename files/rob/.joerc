@@ -1,0 +1,16 @@
+:include /etc/joe/joerc
+
+*
+--wordwrap
+-tab 2
+-indentc 9
+-usetabs
+
+*.php
+-syntax php
+
+*.tpl
+-syntax html
+
+*.html
+-syntax html
