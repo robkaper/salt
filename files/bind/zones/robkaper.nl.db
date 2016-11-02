@@ -1,0 +1,62 @@
+$ORIGIN robkaper.nl.	; designates the start of this zone file in the name space
+$TTL 12h			; default expiration time of all resource records without their own TTL value
+
+robkaper.nl.	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
+	2016110100	; serial number of this zone file
+	12h		; slave refresh (1 day)
+	2h		; slave retry time in case of a problem (2 hours)
+	4w		; slave expiration time (4 weeks)
+	1h		; minimum caching time in case of failed lookups (1 hour)
+	)
+
+@					NS		ns1
+@					NS		ns2
+@					NS		ns3
+
+@					MX		10	mail.robkaper.nl.
+@					IN		TXT	"v=spf1 a mx -all"
+@					IN		SPF	"v=spf1 a mx -all"
+
+@					A			93.191.129.87
+@					AAAA	2a02:348:98:8157::1
+
+localhost	A			127.0.0.1
+localhost	AAAA	::1
+
+ns1				A			194.60.207.54	; ns-01.svc.xl-internetservices.com.
+ns1				AAAA	2a02:348:28:cf36::1
+
+ns2				A			79.170.92.6	; ns-03.svc.xl-internetservices.com.
+ns2				AAAA	2a02:348:29:5c06::1
+
+ns3				A			194.60.207.55	; ns-02.svc.xl-internetservices.com.
+ns3				AAAA	2a02:348:28:cf37::1
+
+mail			A			93.191.129.87
+mail			AAAA	2a02:348:98:8157::1
+
+vps32993	A			93.191.129.87
+vps32993	AAAA	2a02:348:98:8157::1
+
+kpn				A			77.162.214.119
+
+vps				CNAME	vps32993
+www				CNAME	vps32993
+minecraft	CNAME	vps32993
+salt			CNAME	vps32993
+
+dev				CNAME	www
+staging		CNAME	www
+
+home			CNAME	kpn
+
+;$ORIGIN home.robkaper.nl.
+;fritzbox	AAAA	2001:984:a05:1::1
+;chromebook	AAAA	2001:984:a05:1:f5a3:b1e8:473c:2fa6
+;phone				AAAA	2001:984:a05:1:d553:61f4:b2b0:3d90
+
+$INCLUDE Krobkaper.nl.+007+26612.key
+$INCLUDE Krobkaper.nl.+007+36804.key
+$INCLUDE Krobkaper.nl.+007+37920.key
+$INCLUDE Krobkaper.nl.+007+39785.key
+$INCLUDE Krobkaper.nl.+007+42783.key

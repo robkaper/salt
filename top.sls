@@ -1,6 +1,3 @@
-include:
-  - bind
-
 base:
   '*':
     - rob
