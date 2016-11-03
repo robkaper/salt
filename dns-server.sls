@@ -8,11 +8,13 @@ deploy-dns-zones:
     - dir_mode: 750
 
 sign-dns-zones:
-  cmd.wait:
+  cmd.run:
     - name: /usr/local/sbin/zonesigner.sh
     - cwd: /var/cache/bind/zonesigner
     - onchanges:
       - cmd: deploy-dns-zones
+    - require:
+      - file: deploy-zonesigner-script
 
 bind9:
   pkg.installed:
@@ -30,7 +32,6 @@ bind9:
       - file: /etc/bind/named.conf.local
     - onchanges:
       - cmd: deploy-dns-zones
-      - cmd: sign-dns-zones
 
 Deploy BIND config:
   file.managed:
@@ -40,10 +41,20 @@ Deploy BIND config:
     - group: bind
     - mode: 640
 
-Deploy zonesigner script:
+deploy-zonesigner-cache-dir:
+  file.directory:
+    - name: /var/cache/bind/zonesigner
+    - user: bind
+    - group: bind
+    - mode: 750
+    - makedirs: True
+
+deploy-zonesigner-script:
   file.managed:
     - name: /usr/local/sbin/zonesigner.sh
     - source: salt://files/bind/bin/zonesigner.sh
     - user: bind
     - group: bind
     - mode: 750
+    - require:
+      - file: deploy-zonesigner-cache-dir
