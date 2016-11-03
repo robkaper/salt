@@ -8,6 +8,10 @@ bind:
     - name: bind
   group.present:
     - name: bind
+  service.running:
+    - reload: True
+    - watch:
+      - pkg: Deploy DNS zones
 
 Deploy BIND config:
   file.managed:
