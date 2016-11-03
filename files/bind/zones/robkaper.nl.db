@@ -1,7 +1,7 @@
 $TTL 12h			; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
-	2016110300	; serial number of this zone file
+	2016110301	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -43,7 +43,6 @@ vps				CNAME	vps32993
 www				CNAME	vps32993
 minecraft	CNAME	vps32993
 salt			CNAME	vps32993
-test			CNAME	vps32993
 
 dev				CNAME	www
 staging		CNAME	www
