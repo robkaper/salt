@@ -1,0 +1,18 @@
+$TTL 12h     ; default expiration time of all resource records without their own TTL value
+
+@	IN	SOA ns1.robkaper.nl. rjkaper.gmail.com. (
+	2016110300 ; serial number of this zone file
+	12h		; slave refresh (1 day)
+	2h		; slave retry time in case of a problem (2 hours)
+	4w		; slave expiration time (4 weeks)
+	1h		; minimum caching time in case of failed lookups (1 hour)
+	)
+
+@		NS	ns1.robkaper.nl.
+@		NS	ns2.robkaper.nl.
+
+$ORIGIN 6.7.f.5.2.5.4.a.2.0.a.2.ip6.arpa.
+; The following makes the address 2a02:a452:5f76::1
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR home.robkaper.nl.
+4.b.5.4.4.8.b.2.4.1.5.6.f.a.4.9.1.0.0.0	PTR	chromebook.home.robkaper.nl.
+0.9.d.3.0.b.2.b.4.f.1.6.3.5.5.d.1.0.0.0	PTR	phone.home.robkaper.nl.

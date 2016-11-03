@@ -1,10 +1,13 @@
 // Consider adding the 1918 zones here, if they are not used in your organization
 include "/etc/bind/zones.rfc1918";
 
-zone "robkaper.nl" { type master; file "robkaper.nl.db.signed"; };  
-zone "robkaper.hu" { type master; file "robkaper.hu.db"; };
+zone "robkaper.nl" IN { type master; file "robkaper.nl.db.signed"; };  
+zone "robkaper.hu" IN { type master; file "robkaper.hu.db.signed"; };
 
-zone "geertkaper.nl" { type master; file "geertkaper.nl.db"; };
+zone "geertkaper.nl" IN { type master; file "geertkaper.nl.db.signed"; };
 
-zone "7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa" { type master; file "7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa.db"; };
-// zone "5.0.a.0.4.8.9.0.1.0.0.2.ip6.arpa" { type master; file "5.0.a.0.4.8.9.0.1.0.0.2.ip6.arpa.db"; };
+// VPS
+zone "7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa" IN { type master; file "7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa.db.signed"; };
+
+// KPN Home
+zone "6.7.f.5.2.5.4.a.2.0.a.2.ip6.arpa" IN { type master; file "6.7.f.5.2.5.4.a.2.0.a.2.ip6.arpa.db.signed"; };

@@ -1,7 +1,6 @@
-$ORIGIN robkaper.nl.	; designates the start of this zone file in the name space
 $TTL 12h			; default expiration time of all resource records without their own TTL value
 
-robkaper.nl.	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
+@	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
 	2016110100	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
@@ -54,9 +53,3 @@ home			CNAME	kpn
 ;fritzbox	AAAA	2001:984:a05:1::1
 ;chromebook	AAAA	2001:984:a05:1:f5a3:b1e8:473c:2fa6
 ;phone				AAAA	2001:984:a05:1:d553:61f4:b2b0:3d90
-
-$INCLUDE Krobkaper.nl.+007+26612.key
-$INCLUDE Krobkaper.nl.+007+36804.key
-$INCLUDE Krobkaper.nl.+007+37920.key
-$INCLUDE Krobkaper.nl.+007+39785.key
-$INCLUDE Krobkaper.nl.+007+42783.key
