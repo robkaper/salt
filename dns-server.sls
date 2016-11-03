@@ -11,7 +11,9 @@ bind:
   service.running:
     - reload: True
     - watch:
-      - pkg: Deploy DNS zones
+      - file: /etc/bind/named.conf.local
+      - file: Deploy DNS zones
+      - file: Sign DNS zones
 
 Deploy BIND config:
   file.managed:
@@ -21,6 +23,14 @@ Deploy BIND config:
     - group: bind
     - mode: 640
 
+Deploy zonesigner script:
+  file.managed:
+    - name: /usr/local/sbin/zonesigner.sh
+    - source: salt://files/bind/bin/zonesigner.sh
+    - user: bind
+    - group: bind
+    - mode: 750
+
 Deploy DNS zones:
   file.recurse:
     - name: /var/cache/bind-salt
@@ -29,3 +39,10 @@ Deploy DNS zones:
     - group: bind
     - file_mode: 640
     - dir_mode: 750
+
+Sign DNS zones:
+  cmd.wait:
+    - name: /usr/local/sbin/zonesigner.sh
+    - cwd: /var/cache/bind/zonesigner
+    - onchanges:
+		  - cmd: Deploy DNS zones
