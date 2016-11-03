@@ -1,6 +1,6 @@
 deploy-dns-zones:
   file.recurse:
-    - name: /var/cache/bind-salt
+    - name: /var/cache/bind
     - source: salt://files/bind/zones
     - user: bind
     - group: bind
