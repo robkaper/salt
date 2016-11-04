@@ -23,3 +23,11 @@ Files for Rob:
     - mode: 640
     - require:
       - pkg: 'Packages for Rob'
+
+install-cleanjoe:
+  file.managed:
+    - name: /usr/local/bin/cleanjoe
+    - source: salt://files/rob/bin/cleanjoe
+    - user: root
+    - group: root
+    - mode 755
