@@ -30,4 +30,4 @@ install-cleanjoe:
     - source: salt://files/rob/bin/cleanjoe
     - user: root
     - group: root
-    - mode 755
+    - mode: 755
