@@ -1,7 +1,7 @@
 $TTL 12h     ; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA ns1.robkaper.nl. rjkaper.gmail.com. (
-	2016110300 ; serial number of this zone file
+	2016111601 ; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -14,5 +14,9 @@ $TTL 12h     ; default expiration time of all resource records without their own
 $ORIGIN 6.7.f.5.2.5.4.a.2.0.a.2.ip6.arpa.
 ; The following makes the address 2a02:a452:5f76::1
 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR home.robkaper.nl.
+
 4.b.5.4.4.8.b.2.4.1.5.6.f.a.4.9.1.0.0.0	PTR	chromebook.home.robkaper.nl.
-0.9.d.3.0.b.2.b.4.f.1.6.3.5.5.d.1.0.0.0	PTR	phone.home.robkaper.nl.
+9.6.0.d.5.6.8.e.4.f.e.0.0.f.0.2.1.0.0.0	PTR	mate8.home.robkaper.nl.
+0.9.d.3.0.b.2.b.4.f.1.6.3.5.5.d.1.0.0.0	PTR	note4.home.robkaper.nl.
+
+; ruby -r ipaddr -e 'puts IPAddr.new(ARGV.first).reverse' 192.168.1.1
