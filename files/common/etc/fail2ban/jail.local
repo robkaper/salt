@@ -1,0 +1,31 @@
+[DEFAULT]
+
+destemail = rob@robkaper.nl
+bantime = 3600
+ignoreip = 82.95.194.35/32 93.117.192.146/32
+
+[ssh]
+
+enabled = true
+bantime = 86400
+maxretry = 3
+
+[postfix]
+
+enabled = true
+bantime = 86400
+
+[sasl]
+
+enabled  = true
+bantime = 86400
+
+[dovecot]
+
+enabled = true
+
+[apache-noscript]
+
+enabled = true
+maxretry = 2
+bantime = 86400
