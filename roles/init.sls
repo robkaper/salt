@@ -1,4 +1,4 @@
-#!py
+#!python
 """
 roles/init.sls - include the states for all roles of a server if they exist
 How it works:
@@ -8,6 +8,7 @@ How it works:
 Author: Jeffry Sleddens <j.p.g.sleddens@hr.nl>
 Licensed under Apache License (https://raw.github.com/saltstack/salt/develop/LICENSE)
 """
+
 def run():
     config = {}
     if 'role' in __grains__:
