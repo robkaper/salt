@@ -19,8 +19,8 @@ def run():
         print __grains__
         role_states = []
         available_states = __salt__['cp.list_states']()
-        print role
         for role in __grains__['role']:
+            print role
             if 'roles.' + role in available_states:
                 role_states.append('roles.' + role)
 
