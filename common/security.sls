@@ -5,7 +5,6 @@ install-security-packages:
 
 /etc/fail2ban/jail.local:
   file.managed:
-    - name: /etc/fail2ban/jail.local
     - source: salt://files/common/etc/fail2ban/jail.local
     - user: root
     - group: root
@@ -23,9 +22,3 @@ fail2ban:
     - watch:
       - file: /etc/fail2ban/jail.local
  
-/etc/fail2ban/jail.local:
-  file:
-    - managed
-    - source: salt://files/common/etc/fail2ban/jail.local
-    - require:
-      - pkg: fail2ban
