@@ -11,12 +11,16 @@ Licensed under Apache License (https://raw.github.com/saltstack/salt/develop/LIC
 
 def run():
     config = {}
+    print config
     if 'role' in __grains__:
+        print __grains__
         role_states = []
         available_states = __salt__['cp.list_states']()
+        print role
         for role in __grains__['role']:
             if 'roles.' + role in available_states:
                 role_states.append('roles.' + role)
         if len(role_states) > 0:
             config = { 'include' : role_states }
+    print config
     return config
