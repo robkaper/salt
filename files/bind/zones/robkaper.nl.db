@@ -1,7 +1,7 @@
 $TTL 12h			; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
-	2016111601	; serial number of this zone file
+	2016111602	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -57,16 +57,6 @@ dev				CNAME	www
 staging		CNAME	www
 
 home			CNAME	kpn
-
-
-rob      pts/0        Mon Nov  7 09:51 - 09:51  (00:00)     dyn17-039.beheer.hro.nl
-rob      pts/5        Thu Nov  3 17:44 - 17:51  (00:06)     2a02:a452:5f76:1:20f0:ef4:e865:d069
-rob      pts/0        Thu Nov  3 16:24 - 13:56  (21:32)     dyn17-125.beheer.hro.nl
-rob      pts/0        Thu Nov  3 11:17 - 16:24  (05:06)     dyn17-125.beheer.hro.nl
-rob      pts/0        Wed Nov  2 14:40 - 17:29  (02:48)     dyn17-125.beheer.hro.nl
-rob      pts/0        Wed Nov  2 13:31 - 13:32  (00:00)     dyn17-125.beheer.hro.nl
-rob      pts/2        Tue Nov  1 18:35 - 19:48  (01:13)     2a02:a452:5f76:1:94af:6514:2b84:45b4
-rob      pts/2        Tue Nov  1 14:19 - 16:54  (02:35)     dyn17-125.beheer.hro.nl
 
 $ORIGIN home.robkaper.nl.
 chromebook	AAAA	2a02:a452:5f76:1:94af:6514:2b84:45b4
