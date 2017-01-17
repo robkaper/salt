@@ -1,7 +1,7 @@
 $TTL 12h			; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
-	2016111602	; serial number of this zone file
+	2017011701	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -20,12 +20,14 @@ $TTL 12h			; default expiration time of all resource records without their own T
 @					AAAA	2a02:348:98:8157::1
 
 ; ssh-keygen -r robkaper.nl
-@ IN SSHFP 1 1 f85ea91dcc11cc797e8c44c43ecf99480a20c02a
-@ IN SSHFP 1 2 bb2e40685c522e4b99d25a8e290792e0e1a84b60db7a5fb0ca39a3f10006516b
-@ IN SSHFP 2 1 778d5e9d6bb3a1144a39966f695633af89322c80
-@ IN SSHFP 2 2 c32a4bf68987bf6877f4288f428183921eae048cd00494a93a6f43d417f1b91e
-@ IN SSHFP 3 1 67293497ee57cf3449b00ab8db67c0849534f048
-@ IN SSHFP 3 2 211368162f1cb3c868386399c981341ddb0f6ebe5a3963d90832d8d118ce91e9
+@ IN SSHFP 1 1 3c67288be000335fcb17417bd22c250a0f39ccd5
+@ IN SSHFP 1 2 4ad847b41f80ca1ca68a45e51c264e0c4b944e8a611edf856f49d06d73c06756
+@ IN SSHFP 2 1 6a1c9a9bfb05347db5782ad3873c213ac81e91dd
+@ IN SSHFP 2 2 7d577d1934d41dddbbe55166501507d327d5c8c16348235f317fd42bb6249226
+@ IN SSHFP 3 1 765b257def22635176f7c43236514f6d12a5171b
+@ IN SSHFP 3 2 793261dc53a11e01fed215498ea864c454d30f11bcacf7d3fff4e95de88def59
+@ IN SSHFP 4 1 28feb7c5bd270122669e5b10aae81fa16105e29d
+@ IN SSHFP 4 2 94206f03d42a039c583f67037ebea9d5cf1d2728b955e2f04af727ceceddd967
 
 localhost	A			127.0.0.1
 localhost	AAAA	::1
@@ -39,19 +41,22 @@ ns2				AAAA	2a02:348:29:5c06::1
 ns3				A			194.60.207.55	; ns-02.svc.xl-internetservices.com.
 ns3				AAAA	2a02:348:28:cf37::1
 
-mail			A			93.191.129.87
-mail			AAAA	2a02:348:98:8157::1
+mail			A			141.138.197.59
+mail			AAAA	2a02:348:7c:c53b::1
 
 vps32993	A			93.191.129.87
 vps32993	AAAA	2a02:348:98:8157::1
 
+vps68778	A	141.138.197.59
+vps68778	AAAA	2a02:348:7c:c53b::1
+
 kpn				A			77.162.214.119
 kpn				AAAA	2a02:a452:5f76::1
 
-vps				CNAME	vps32993
-www				CNAME	vps32993
-minecraft	CNAME	vps32993
-salt			CNAME	vps32993
+vps				CNAME	vps68778
+www				CNAME	vps68778
+minecraft	CNAME	vps68778
+salt			CNAME	vps68778
 
 dev				CNAME	www
 staging		CNAME	www

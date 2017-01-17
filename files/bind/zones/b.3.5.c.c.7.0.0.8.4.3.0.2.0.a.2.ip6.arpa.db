@@ -1,7 +1,7 @@
 $TTL 12h     ; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA ns1.robkaper.nl. rjkaper.gmail.com. (
-	2014102200	; serial number of this zone file
+	2017011700	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -11,13 +11,14 @@ $TTL 12h     ; default expiration time of all resource records without their own
 @		NS	ns1.robkaper.nl.
 @		NS	ns2.robkaper.nl.
 
-; The following makes the address 2a02:348:98:8157::1
-$ORIGIN 7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa.
+; The following makes the address 2a02:348:7c:c53b::1
+$ORIGIN b.3.5.c.c.7.0.0.8.4.3.0.2.0.a.2.ip6.arpa.
 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0	PTR vps.robkaper.nl.
 
-; Here, we delegate 2a02:348:98:8157:1::/64 to the example.org servers and 2001:db8:302:2::/64 to the example.com servers.
+; Here, we delegate 2a02:348:7c:c53b:1::/64 to the example.org servers and
+; 2a02:348:7c:c53b:2::/64 to the example.com servers.
 ; 
-; $ORIGIN 7.5.1.8.8.9.0.0.8.4.3.0.2.0.a.2.ip6.arpa.
+; $ORIGIN b.3.5.c.c.7.0.0.8.4.3.0.2.0.a.2.ip6.arpa.
 ; 1		NS ns1.example.org.
 ; 		NS ns2.example.org.
 ; 2		NS ns1.example.com.
