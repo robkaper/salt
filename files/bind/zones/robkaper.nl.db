@@ -1,7 +1,7 @@
 $TTL 12h			; default expiration time of all resource records without their own TTL value
 
 @	IN	SOA	ns1.robkaper.nl.	rjkaper.gmail.com. (
-	2017011701	; serial number of this zone file
+	2017011702	; serial number of this zone file
 	12h		; slave refresh (1 day)
 	2h		; slave retry time in case of a problem (2 hours)
 	4w		; slave expiration time (4 weeks)
@@ -13,6 +13,8 @@ $TTL 12h			; default expiration time of all resource records without their own T
 @					NS		ns3
 
 @					MX		10	mail.robkaper.nl.
+@                                       MX              20 	vps32993.robkaper.nl.
+
 @					IN		TXT	"v=spf1 a mx -all"
 @					IN		SPF	"v=spf1 a mx -all"
 
