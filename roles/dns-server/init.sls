@@ -12,7 +12,7 @@ sign-dns-zones:
     - name: /usr/local/sbin/zonesigner.sh
     - cwd: /var/cache/bind/zonesigner
     - onchanges:
-      - cmd: deploy-dns-zones
+      - file: deploy-dns-zones
     - require:
       - file: deploy-zonesigner-script
 
@@ -31,7 +31,7 @@ bind9:
     - watch:
       - file: /etc/bind/named.conf.local
     - onchanges:
-      - cmd: deploy-dns-zones
+      - file: deploy-dns-zones
 
 Deploy BIND config:
   file.managed:
